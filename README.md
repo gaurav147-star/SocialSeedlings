@@ -49,3 +49,7 @@ Displays photos in both grid and list view.
 
 ## Application Screenshots
 
+![image](https://github.com/gaurav147-star/SocialSeedlings/assets/78996081/5956c259-a14d-409f-ac1c-e865ce8d7ea4)
+![image](https://github.com/gaurav147-star/SocialSeedlings/assets/78996081/b444e50e-943c-4cf6-a499-cbee347878b2)
+
+
