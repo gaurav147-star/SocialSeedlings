@@ -96,42 +96,43 @@ const Profilepage = () => {
           <main>
             <div className={styles.container}>
               <div className={styles.gallery}>
-                {profile.photos.map((pic, index) => (
-                  <div
-                    className={styles["gallery-item"]}
-                    tabIndex="0"
-                    key={index}
-                  >
-                    <img
-                      src={pic.urls.regular}
-                      className={styles["gallery-image"]}
-                      alt=""
-                    />
+                {profile.photos &&
+                  profile.photos.map((pic, index) => (
+                    <div
+                      className={styles["gallery-item"]}
+                      tabIndex="0"
+                      key={index}
+                    >
+                      <img
+                        src={pic.urls.regular}
+                        className={styles["gallery-image"]}
+                        alt=""
+                      />
 
-                    <div className={styles["gallery-item-info"]}>
-                      <ul>
-                        <li className={styles["gallery-item-likes"]}>
-                          <span className={styles["visually-hidden"]}>
-                            Likes:
-                          </span>
-                          <i
-                            className={`${styles.fas} ${styles["fa-heart"]}`}
-                            aria-hidden="true"
-                          ></i>
-                        </li>
-                        <li className={styles["gallery-item-comments"]}>
-                          <span className={styles["visually-hidden"]}>
-                            Comments:
-                          </span>
-                          <i
-                            className={`${styles.fas} ${styles["fa-component"]}`}
-                            aria-hidden="true"
-                          ></i>
-                        </li>
-                      </ul>
+                      <div className={styles["gallery-item-info"]}>
+                        <ul>
+                          <li className={styles["gallery-item-likes"]}>
+                            <span className={styles["visually-hidden"]}>
+                              Likes:
+                            </span>
+                            <i
+                              className={`${styles.fas} ${styles["fa-heart"]}`}
+                              aria-hidden="true"
+                            ></i>
+                          </li>
+                          <li className={styles["gallery-item-comments"]}>
+                            <span className={styles["visually-hidden"]}>
+                              Comments:
+                            </span>
+                            <i
+                              className={`${styles.fas} ${styles["fa-component"]}`}
+                              aria-hidden="true"
+                            ></i>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
               {/* <div className={styles.loader}></div> */}
             </div>
