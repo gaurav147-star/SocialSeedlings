@@ -1,4 +1,4 @@
-# [**Social Seedings**]
+# [**Social Seedings**](https://social-seedlings-alpha.vercel.app/)
 
 This is a React web application that includes two main features:
 
@@ -13,7 +13,7 @@ Clicking on User Info in the News Feed redirects to the user's profile page.
 Fetches user details and their photos from the Unsplash API.
 Displays photos in both grid and list view.
 
-[Visit&nbsp;the&nbsp;live&nbsp;website](|)
+[Visit&nbsp;the&nbsp;live&nbsp;website](https://social-seedlings-alpha.vercel.app/)
 
 ---
 
@@ -46,3 +46,6 @@ Displays photos in both grid and list view.
 - React Router: Library for handling navigation in React applications.
 - Axios: Promise-based HTTP client for making API requests.
 - Unsplash API: Provides access to high-quality photos from the Unsplash platform.
+
+## Application Screenshots
+
