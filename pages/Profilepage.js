@@ -65,7 +65,7 @@ const Profilepage = () => {
                 <div className={styles["profile-stats"]}>
                   <li>
                     <span className={styles["profile-stat-count"]}>
-                      {profile.photos.length}
+                      {profile.photos ? profile.photos.length : 0}
                     </span>{" "}
                     posts
                   </li>
