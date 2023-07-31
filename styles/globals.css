@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+.toggleButton {
+  position: absolute;
+  right: 12px;
+}
+
+.text-center {
+  text-align: center;
+}
