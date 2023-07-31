@@ -18,7 +18,7 @@ const Feedpage = () => {
   // Function to fetch more posts
   const loadMorePosts = () => {
     setLoadingMore(true);
-    dispatch(listPosts(page + 1))
+    dispatch(listPosts(page+1))
       .then(() => {
         setLoadingMore(false);
         setPage((prevPage) => prevPage + 1);
@@ -29,11 +29,13 @@ const Feedpage = () => {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting && !loadingMore) {
-        loadMorePosts();
-      }
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !loadingMore) {
+          loadMorePosts();
+        }
+      },
+    );
 
     observer.observe(document.getElementById("infinite-scroll-trigger"));
 
@@ -41,6 +43,7 @@ const Feedpage = () => {
       observer.disconnect();
     };
   }, [loadingMore]);
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -50,9 +53,7 @@ const Feedpage = () => {
     <>
       {loading && <Spinner />}
 
-      {!loading &&
-        posts &&
-        posts.map((postItem) => <Post key={postItem.id} post={postItem} />)}
+      {!loading && posts && posts.map((postItem) => <Post key={postItem.id} post={postItem} />)}
 
       <div id="infinite-scroll-trigger" style={{ height: "1px" }}></div>
       {!loading && loadingMore && <Spinner />}

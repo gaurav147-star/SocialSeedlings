@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Spinner from "../components/Spinner";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const Previous = () => {
   const router = useRouter();
@@ -103,10 +104,12 @@ const Profilepage = () => {
                       tabIndex="0"
                       key={index}
                     >
-                      <img
+                      <Image
                         src={pic.urls.regular}
                         className={styles["gallery-image"]}
                         alt=""
+                        width={500}
+                        height={500}
                       />
 
                       <div className={styles["gallery-item-info"]}>

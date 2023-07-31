@@ -2,9 +2,7 @@ import React, { useContext } from "react";
 import styles from "../../styles/Post.module.css";
 import Image from "next/image";
 import { useRouter } from "next/router";
-
 import DarkModeContext from "../../context/DarkModeContext";
-
 import { useDispatch } from "react-redux"; // Removed unnecessary useSelector import
 import { dataProfile } from "../../actions/profileAction";
 import { PiShareFatFill } from "react-icons/pi";
@@ -40,10 +38,12 @@ const Post = ({ post }) => {
             <span>{post.user?.location?.name}</span>
           </div>
         </div>
-        <img
+        <Image
           className={styles.postImage}
           src={post.urls?.small}
           alt="post of user"
+          width={500}
+          height={500}
         />
         <div className={styles.status}>
           <div className={styles.like}>
